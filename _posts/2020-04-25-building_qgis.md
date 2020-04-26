@@ -18,7 +18,11 @@ sudo ln -s /usr/bin/ccache g++
 From `ccache` documentation.
 > There are two ways to use ccache. You can either prefix your compilation commands with ccache or you can let ccache masquerade as the compiler by creating a symbolic link (named as the compiler) to ccache. The first method is most convenient if you just want to try out ccache or wish to use it for some specific projects. The second method is most useful for when you wish to use ccache for all your compilations.
 
-So it's the second way.
+So it's the second way. `ccache` is installed by `apt` so it sould be in `/usr/bin`. Altenatively, you can
+```
+sudo ln -s /usr/bin/ccache /usr/local/bin/gcc
+sudo ln -s /usr/bin/ccache /usr/local/bin/g++
+```
 
 
 ## What is `LD_LIBRARY_PATH`?
